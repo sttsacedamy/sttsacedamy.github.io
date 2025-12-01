@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STTS Arts & Crafts Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #ffb3e6, #ff6dcb);
+            color: white;
+            overflow-x: hidden;
+            perspective: 1200px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .container {
+            max-width: 850px;
+            padding: 30px 20px;
+            margin: auto;
+            text-align: center;
+            animation: floatIn 1.2s ease-in-out;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes floatIn {
+            from {opacity: 0; transform: translateY(40px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            margin-bottom: 10px;
+            transform: rotateX(8deg);
+            animation: titleFlip 1.4s ease-out;
+            display: inline-block;
+        }
+
+        @keyframes titleFlip {
+            0% { transform: rotateX(90deg); opacity: 0; }
+            100% { transform: rotateX(0deg); opacity: 1; }
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+
+        .course-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .course-btn {
+            display: block;
+            padding: 18px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, #ff9ee4, #ff4bb5);
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-align: center;
+            transform: perspective(700px) translateZ(0);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .course-btn:hover {
+            transform: perspective(700px) translateZ(30px) scale(1.05);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.45);
+        }
+
+        h2 {
+            margin-top: 50px;
+            font-size: 1.8rem;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+            transform: rotateX(4deg);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {transform: translateX(-50px); opacity: 0;}
+            to {transform: translateX(0); opacity: 1;}
+        }
+
+        .info-box {
+            margin-top: 25px;
+            padding: 25px;
+            background: rgba(255,255,255,0.22);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .whatsapp-number {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin: 20px 0 30px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .whatsapp-number a {
+            color: #25D366;
+            text-decoration: none;
+            background: white;
+            color: #d1008a;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1.3rem;
+        }
+
+        .footer {
+            margin-top: 60px;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>STTS ARTS & CRAFTS ACADEMY</h1>
+    <div class="subtitle">
+        Soft Toys • Bag Making • Costume Designing & More
+    </div>
+
+    <div class="whatsapp-number">
+        WhatsApp: <a href="https://wa.me/94772900343">077 290 0343</a>
+    </div>
+
+    <h2>📚 Courses Offered</h2>
+
+    <div class="course-buttons">
+
+        <a href="https://wa.me/94772900343?text=Hi,%20I%20would%20like%20to%20enroll%20in%20the%20ටෙඩි%20බෙයා%20(Teddy%20%2F%20Soft%20toys)%20course.%0A%0AName%3A%0ALocation%3A" class="course-btn">ටෙඩි බෙයා (Teddy / Soft toys)</a>
+
+        <a href="https://wa.me/94772900343?text=Hi,%20I%20would%20like%20to%20enroll%20in%20the%20සෝෆ්ට්%20ටොයිස්%20නිර්මාණය%20course.%0A%0AName%3A%0ALocation%3A" class="course-btn">සෝෆ්ට් ටොයිස් නිර්මාණය</a>
+
+        <a href="https://wa.me/94772900343?text=Hi,%20I%20would%20like%20to%20enroll%20in%20the%20බැග්%20සැකසුම්%20course.%0A%0AName%3A%0ALocation%3A" class="course-btn">බැග් සැකසුම්</a>
+
+        <a href="https://wa.me/94772900343?text=Hi,%20I%20would%20like%20to%20enroll%20in%20the%20පැරීස්%20%2F%20පාර්ස්%20නිර්මාණ%20course.%0A%0AName%3A%0ALocation%3A" class="course-btn">පැරීස් / පාර්ස් නිර්මාණ</a>
+
+        <a href="https://wa.me/94772900343?text=Hi,%20I%20would%20like%20to%20enroll%20in%20the%20සෝකා%20(Sewing%20%2F%20Stitching)%20course.%0A%0AName%3A%0ALocation%3A" class="course-btn">සෝකා (Sewing / Stitching)</a>
+
+        <a href="https://wa.me/94772900343?text=Hi,%20I%20would%20like%20to%20enroll%20in%20the%20කඩ්ඩි%20කොස්ටියුමි%20(Kids%20costumes)%20course.%0A%0AName%3A%0ALocation%3A" class="course-btn">කඩ්ඩි කොස්ටියුමි (Kids costumes)</a>
+
+        <a href="https://wa.me/94772900343?text=Hi,%20I%20would%20like%20to%20enroll%20in%20the%20බෙබි%20සපත්තු%20(Baby%20shoes)%20course.%0A%0AName%3A%0ALocation%3A" class="course-btn">බෙබි සපත්තු (Baby shoes)</a>
+
+        <a href="https://wa.me/94772900343?text=Hi,%20I%20would%20like%20to%20enroll%20in%20the%20බෙබි%20හොප්පි%20course.%0A%0AName%3A%0ALocation%3A" class="course-btn">බෙබි හොප්පි</a>
+
+    </div>
+
+    <div class="info-box">
+        ඕනෑම course button එක tap කරන්න →<br>
+        WhatsApp open වෙලා course එක already type වෙලා එනවා.<br>
+        <strong>ඔයා නමයි location එකයි දාලා send කරන්න!</strong>
+    </div>
+
+    <div class="footer">
+        © 2025 STTS Arts & Crafts Academy<br>
+        <small>All rights reserved</small>
+    </div>
+
+</div>
+
+</body>
+</html>
