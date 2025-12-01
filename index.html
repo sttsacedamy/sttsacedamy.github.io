@@ -1,184 +1,240 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STTS Arts & Crafts Academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STTS Arts & Crafts Academy</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            font-family: "Poppins", sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
 
-        /* Header / Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #d10078, #ff70c6);
-            padding: 80px 20px;
-            text-align: center;
-            color: white;
-        }
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, #d10078, #ff70c6);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
 
-        .hero h1 {
-            font-size: 2.7rem;
-            font-weight: 700;
-        }
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transform: rotateX(8deg);
+  animation: heroFade 1s ease forwards;
+}
 
-        .hero p {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
+.hero p {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  animation: heroFade 1.2s ease forwards;
+}
 
-        .contact-btn {
-            display: inline-block;
-            margin-top: 28px;
-            background: white;
-            color: #d10078;
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-        }
+.contact-btn {
+  display: inline-block;
+  margin-top: 28px;
+  background: white;
+  color: #d10078;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
 
-        /* Section Titles */
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin: 60px 0 20px;
-            color: #d10078;
-            font-weight: 700;
-        }
+.contact-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
 
-        /* Courses Section */
-        .courses {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-            gap: 20px;
-        }
+/* SECTION TITLE */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 60px 0 20px;
+  color: #d10078;
+  font-weight: 700;
+}
 
-        .course-box {
-            background: white;
-            padding: 20px;
-            border-radius: 14px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: 0.3s;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
+/* COURSES */
+.courses {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 20px;
+}
 
-        .course-box:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-        }
+.course-box {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.4s;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transform-style: preserve-3d;
+}
 
-        .course-box a {
-            text-decoration: none;
-            color: #d10078;
-        }
+.course-box:hover {
+  transform: rotateY(10deg) rotateX(5deg) translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
 
-        /* Gallery */
-        .gallery {
-            max-width: 1150px;
-            margin: auto;
-            padding: 0 20px 60px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-            gap: 15px;
-        }
+.course-box a {
+  text-decoration: none;
+  color: #d10078;
+}
 
-        .gallery img {
-            width: 100%;
-            border-radius: 14px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-            transition: 0.3s;
-        }
+/* GALLERY GRID */
+.gallery {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 20px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 18px;
+  perspective: 1200px;
+}
 
-        .gallery img:hover {
-            transform: scale(1.04);
-        }
+.gallery img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
 
-        /* Footer */
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 25px 0;
-            margin-top: 40px;
-        }
+.gallery img:hover {
+  transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
 
-    </style>
+/* LIGHTBOX */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.88);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 28px rgba(255,255,255,0.25);
+  animation: lightboxFade 0.4s ease;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 40px;
+}
+
+/* ANIMATIONS */
+@keyframes heroFade {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes lightboxFade {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HERO SECTION -->
-    <div class="hero">
-        <h1>STTS Arts & Crafts Academy</h1>
-        <p>Soft Toys • Bags • Costume Designing • Sewing & More</p>
-        <a class="contact-btn" href="https://wa.me/94772900343">WhatsApp: 077 290 0343</a>
-    </div>
+<!-- HERO -->
+<div class="hero">
+    <h1>STTS Arts & Crafts Academy</h1>
+    <p>Soft Toys • Bags • Costume Designing • Sewing & More</p>
+    <a class="contact-btn" href="https://wa.me/94772900343">WhatsApp: 077 290 0343</a>
+</div>
 
-    <!-- COURSES -->
-    <h2 class="section-title">📚 Courses We Offer</h2>
+<!-- COURSES -->
+<h2 class="section-title">📚 Courses We Offer</h2>
+<div class="courses">
+    <div class="course-box"><a href="https://wa.me/94772900343?text=ටෙඩි%20බෙයා%20course">ටෙඩි බෙයා (Teddy / Soft toys)</a></div>
+    <div class="course-box"><a href="https://wa.me/94772900343?text=සෝෆ්ට්%20ටොයිස්%20course">සෝෆ්ට් ටොයිස් නිර්මාණය</a></div>
+    <div class="course-box"><a href="https://wa.me/94772900343?text=බැග්%20සැකසුම්%20course">බැග් සැකසුම්</a></div>
+    <div class="course-box"><a href="https://wa.me/94772900343?text=පැරීස්%20course">පැරීස් / පාර්ස් නිර්මාණ</a></div>
+    <div class="course-box"><a href="https://wa.me/94772900343?text=සෝකා%20course">සෝකා (Sewing / Stitching)</a></div>
+    <div class="course-box"><a href="https://wa.me/94772900343?text=Kids%20Costume%20course">කඩ්ඩි කොස්ටියුමි (Kids costumes)</a></div>
+    <div class="course-box"><a href="https://wa.me/94772900343?text=Baby%20Shoes%20course">බෙබි සපත්තු (Baby shoes)</a></div>
+    <div class="course-box"><a href="https://wa.me/94772900343?text=බෙබි%20හොප්පි%20course">බෙබි හොප්පි</a></div>
+</div>
 
-    <div class="courses">
+<!-- GALLERY -->
+<h2 class="section-title">📸 Student Work & Sample Creations</h2>
+<div class="gallery">
+    <img src="https://imgpx.com/en/Fct3rWcIe13s.png" class="gallery-img" alt="Sample 1">
+    <img src="https://imgpx.com/en/U55oZO2MzT5a.png" class="gallery-img" alt="Sample 2">
+    <img src="https://imgpx.com/en/8ruPmiB262eC.png" class="gallery-img" alt="Sample 3">
+    <img src="https://imgpx.com/en/IAZ3kHuPNJ7R.png" class="gallery-img" alt="Sample 4">
+    <img src="https://imgpx.com/en/TYKeNS6oYN8e.png" class="gallery-img" alt="Sample 5">
+    <img src="https://imgpx.com/en/GEQvFSl4IcRZ.png" class="gallery-img" alt="Sample 6">
+    <img src="https://imgpx.com/en/kY5MaIyeDd45.png" class="gallery-img" alt="Sample 7">
+    <img src="https://imgpx.com/en/Dkbew0pyfcea.png" class="gallery-img" alt="Sample 8">
+    <img src="https://imgpx.com/en/Pg68CLjm5wPV.png" class="gallery-img" alt="Sample 9">
+    <img src="https://imgpx.com/en/we2GEvpw5OaB.png" class="gallery-img" alt="Sample 10">
+</div>
 
-        <div class="course-box"><a href="https://wa.me/94772900343?text=ටෙඩි%20බෙයා%20course">ටෙඩි බෙයා (Teddy / Soft toys)</a></div>
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Preview">
+</div>
 
-        <div class="course-box"><a href="https://wa.me/94772900343?text=සෝෆ්ට්%20ටොයිස්%20course">සෝෆ්ට් ටොයිස් නිර්මාණය</a></div>
+<!-- FOOTER -->
+<footer>
+    © 2025 STTS Arts & Crafts Academy — All Rights Reserved
+</footer>
 
-        <div class="course-box"><a href="https://wa.me/94772900343?text=බැග්%20සැකසුම්%20course">බැග් සැකසුම්</a></div>
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const images = document.querySelectorAll('.gallery-img');
 
-        <div class="course-box"><a href="https://wa.me/94772900343?text=පැරීස්%20course">පැරීස් / පාර්ස් නිර්මාණ</a></div>
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
 
-        <div class="course-box"><a href="https://wa.me/94772900343?text=සෝකා%20course">සෝකා (Sewing / Stitching)</a></div>
-
-        <div class="course-box"><a href="https://wa.me/94772900343?text=Kids%20Costume%20course">කඩ්ඩි කොස්ටියුමි (Kids costumes)</a></div>
-
-        <div class="course-box"><a href="https://wa.me/94772900343?text=Baby%20Shoes%20course">බෙබි සපත්තු (Baby shoes)</a></div>
-
-        <div class="course-box"><a href="https://wa.me/94772900343?text=බෙබි%20හොප්පි%20course">බෙබි හොප්පි</a></div>
-
-    </div>
-
-    <!-- GALLERY -->
-    <h2 class="section-title">📸 Student Work & Sample Creations</h2>
-
-    <div class="gallery">
-
-        <img src="https://imgpx.com/en/Fct3rWcIe13s.png">
-        <img src="https://imgpx.com/en/U55oZO2MzT5a.png">
-        <img src="https://imgpx.com/en/8ruPmiB262eC.png">
-        <img src="https://imgpx.com/en/IAZ3kHuPNJ7R.png">
-        <img src="https://imgpx.com/en/TYKeNS6oYN8e.png">
-        <img src="https://imgpx.com/en/GEQvFSl4IcRZ.png">
-        <img src="https://imgpx.com/en/kY5MaIyeDd45.png">
-        <img src="https://imgpx.com/en/Dkbew0pyfcea.png">
-        <img src="https://imgpx.com/en/Pg68CLjm5wPV.png">
-        <img src="https://imgpx.com/en/we2GEvpw5OaB.png">
-
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        © 2025 STTS Arts & Crafts Academy — All Rights Reserved
-    </footer>
+function closeLightbox() {
+    lightbox.style.display = 'none';
+}
+</script>
 
 </body>
 </html>
