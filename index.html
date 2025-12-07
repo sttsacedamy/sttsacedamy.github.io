@@ -1,168 +1,22 @@
+
+```html
 <!DOCTYPE html>
 <html lang="si">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>STTS Arts & Crafts Academy</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-body {
-    font-family: "Poppins", sans-serif;
-    background: #f5f5f5;
-    margin: 0;
-    color: #222;
-}
-
-/* HERO */
-.hero {
-    background: linear-gradient(135deg, #d10078, #ff70c6);
-    padding: 60px 20px;
-    text-align: center;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-.contact-btn {
-    display: inline-block;
-    margin-top: 20px;
-    background: white;
-    color: #d10078;
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* COURSES */
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin: 50px 0 20px;
-    color: #d10078;
-    font-weight: 700;
-}
-
-.courses {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    gap: 20px;
-}
-
-.course-box {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    text-align: center;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    transform-style: preserve-3d;
-}
-
-.course-box:hover {
-    transform: rotateY(8deg) rotateX(4deg) scale(1.05);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-.course-box a {
-    text-decoration: none;
-    color: #d10078;
-}
-
-/* FADE CAROUSEL */
-.carousel-container {
-    max-width: 700px;
-    margin: 40px auto 60px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-    perspective: 1000px;
-}
-
-.carousel-container img {
-    width: 100%;
-    position: absolute;
-    top: 0; left: 0;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out, transform 0.3s;
-    border-radius: 14px;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-
-.carousel-container img.active {
-    opacity: 1;
-    position: relative;
-}
-
-/* 3D Tilt Effect on hover */
-.carousel-container img.active:hover {
-    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-
-/* NAVIGATION ARROWS */
-.carousel-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    padding: 0 10px;
-}
-
-.carousel-nav button {
-    background: rgba(255,255,255,0.7);
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.carousel-nav button:hover {
-    background: rgba(255,255,255,0.95);
-    transform: scale(1.1);
-}
-
-/* FOOTER */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 40px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero">
     <h1>STTS Arts & Crafts Academy</h1>
     <p>Soft Toys • Bags • Costume Designing • Sewing & More</p>
     <a class="contact-btn" href="https://wa.me/94772900343">WhatsApp: 077 290 0343</a>
 </div>
 
-<!-- COURSES -->
 <h2 class="section-title">📚 Courses We Offer</h2>
 <div class="courses">
     <div class="course-box"><a href="https://wa.me/94772900343?text=ටෙඩි%20බෙයා%20course">ටෙඩි බෙයා (Teddy / Soft toys)</a></div>
@@ -175,7 +29,6 @@ footer {
     <div class="course-box"><a href="https://wa.me/94772900343?text=බෙබි%20හොප්පි%20course">බෙබි හොප්පි</a></div>
 </div>
 
-<!-- FADE CAROUSEL -->
 <h2 class="section-title">📸 Sample Creations</h2>
 <div class="carousel-container" id="carousel">
     <img src="https://imgpx.com/en/Fct3rWcIe13s.png" class="active" alt="Sample 1">
@@ -183,66 +36,17 @@ footer {
     <img src="https://imgpx.com/en/8ruPmiB262eC.png" alt="Sample 3">
     <img src="https://imgpx.com/en/IAZ3kHuPNJ7R.png" alt="Sample 4">
     <img src="https://imgpx.com/en/TYKeNS6oYN8e.png" alt="Sample 5">
-    <img src="https://imgpx.com/en/GEQvFSl4IcRZ.png" alt="Sample 6">
-    <img src="https://imgpx.com/en/kY5MaIyeDd45.png" alt="Sample 7">
-    <img src="https://imgpx.com/en/Dkbew0pyfcea.png" alt="Sample 8">
-    <img src="https://imgpx.com/en/Pg68CLjm5wPV.png" alt="Sample 9">
-    <img src="https://imgpx.com/en/we2GEvpw5OaB.png" alt="Sample 10">
 
-    <!-- NAVIGATION -->
     <div class="carousel-nav">
         <button id="prev">&#10094;</button>
         <button id="next">&#10095;</button>
     </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
     © 2025 STTS Arts & Crafts Academy — All Rights Reserved
 </footer>
 
-<script>
-const carousel = document.getElementById('carousel');
-const slides = carousel.querySelectorAll('img');
-let currentIndex = 0;
-let interval;
-
-// Function to show slide
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if(i === index) slide.classList.add('active');
-    });
-}
-
-// Next slide
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-}
-
-// Previous slide
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(currentIndex);
-}
-
-// Automatic sliding
-function startSlideShow() {
-    interval = setInterval(nextSlide, 1000); // every 1 second
-}
-
-// Pause on hover
-carousel.addEventListener('mouseenter', () => clearInterval(interval));
-carousel.addEventListener('mouseleave', startSlideShow);
-
-// Navigation buttons
-document.getElementById('next').addEventListener('click', nextSlide);
-document.getElementById('prev').addEventListener('click', prevSlide);
-
-// Start slideshow
-startSlideShow();
-</script>
-
 </body>
 </html>
+```
