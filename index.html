@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="si">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -22,7 +22,7 @@
     --bg:#f7f7f8;
     --dark:#0f1113;
     --muted:#9aa0a6;
-    --accent:#cc1f6b; /* brand accent - tweak if you want */
+    --accent:#cc1f6b;
     --card:#ffffff;
     --glass: rgba(255,255,255,0.6);
     --radius:16px;
@@ -30,7 +30,6 @@
     --transition: 320ms cubic-bezier(.2,.9,.3,1);
     --safe-pad: 20px;
   }
-  /* Reset */
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
   body{
@@ -42,8 +41,6 @@
     line-height:1.45;
     padding-bottom:60px;
   }
-
-  /* Light animated gradient background (subtle, low-cost) */
   .bg-anim{
     position:fixed;inset:0;z-index:-2;
     background:linear-gradient(120deg,#f7f6fb 0%, #fff 30%, #fff6fb 60%);
@@ -52,11 +49,7 @@
     animation:slowShift 16s ease-in-out infinite;
   }
   @keyframes slowShift{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(18deg)}100%{filter:hue-rotate(0deg)}}
-
-  /* Lightweight particles canvas container */
   canvas#particles{position:fixed;inset:0;z-index:-1;opacity:0.22;pointer-events:none}
-
-  /* Top header / hero */
   .hero{
     max-width:var(--max);margin:32px auto;padding:36px;display:flex;gap:28px;align-items:center;
     background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));
@@ -86,19 +79,13 @@
   .btn-outline{background:transparent;border:1px solid rgba(16,18,20,0.06);color:var(--dark);}
   .btn:active{transform:translateY(1px) scale(.998)}
   .subtitle-badge{display:inline-block;background:#fff;padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,0.04);font-weight:600;color:var(--accent);font-size:0.85rem}
-
-  /* Right column hero visual */
   .hero .right{
     width:320px;min-width:220px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#fff,#f8f8fb);box-shadow:0 8px 30px rgba(16,18,20,0.06);
     display:flex;align-items:center;justify-content:center;padding:16px;
   }
   .hero .right img{max-width:100%;border-radius:10px;display:block}
-
-  /* content sections */
   .section{max-width:var(--max);margin:34px auto;padding:0 var(--safe-pad)}
   .section-title{font-weight:700;font-size:1.25rem;margin-bottom:12px;color:var(--dark)}
-
-  /* Courses grid marketing style */
   .courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
   .card{
     background:var(--card);padding:18px;border-radius:14px;box-shadow:0 8px 24px rgba(14,16,18,0.04);
@@ -108,12 +95,8 @@
   .card .title{font-weight:700;font-size:1rem}
   .card .desc{color:var(--muted);font-size:0.92rem}
   .card .tag{font-size:0.8rem;color:var(--accent);font-weight:700}
-
-  /* benefit strip */
   .benefits{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
   .benefit{background:linear-gradient(90deg,rgba(204,31,107,0.06),rgba(255,123,191,0.03));padding:10px 12px;border-radius:12px;font-weight:600;color:var(--dark);font-size:0.9rem}
-
-  /* Carousel */
   .carousel-wrap{display:flex;justify-content:center;margin-top:14px}
   .carousel{position:relative;width:100%;max-width:860px;height:420px;border-radius:14px;overflow:hidden;box-shadow:0 18px 48px rgba(10,12,14,0.06);background:#fff}
   .slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 700ms ease, transform 700ms ease}
@@ -124,20 +107,14 @@
   .dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
   .dot{width:10px;height:10px;border-radius:99px;background:rgba(0,0,0,0.2);cursor:pointer}
   .dot.active{background:var(--accent);box-shadow:0 6px 16px rgba(204,31,107,0.18)}
-
-  /* testimonials */
   .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:12px}
   .t-card{background:linear-gradient(180deg,#fff,#fbfbfd);padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.04)}
   .t-card p{color:var(--muted);font-size:0.95rem}
   .t-card .who{font-weight:700;margin-top:10px;font-size:0.95rem}
-
-  /* sticky bottom contact */
   .sticky{
     position:fixed;right:18px;bottom:18px;background:var(--accent);color:white;padding:12px 14px;border-radius:999px;display:flex;align-items:center;gap:10px;z-index:60;
     box-shadow:0 12px 36px rgba(16,18,20,0.15);text-decoration:none;font-weight:700;border:none;
   }
-
-  /* small screens */
   @media (max-width:820px){
     .hero{flex-direction:column;align-items:flex-start;padding:24px}
     .hero .right{width:100%;order:-1;margin-bottom:10px}
@@ -149,11 +126,7 @@
     .carousel{height:220px}
     .slide img{border-radius:8px}
   }
-
-  /* accessibility: prefers reduced motion */
-  @media (prefers-reduced-motion: reduce){
-    *{transition:none!important;animation:none!important}
-  }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
   </style>
 </head>
 <body>
@@ -170,26 +143,21 @@
           <div style="font-weight:800;font-size:1.25rem">Turn creativity into income</div>
         </div>
       </div>
-
       <h1>Professional training in soft toys, bag design & sewing</h1>
       <p>Hands-on classes, small batches, certificates, and marketing guidance so students can sell their creations.</p>
-
       <div class="cta-row" style="margin-top:12px;">
         <a class="btn btn-primary" id="enrollBtn" href="https://wa.me/94772900343?text=I'm%20interested%20in%20courses%20(STTS)" aria-label="Enroll via WhatsApp">
           Enroll Now
         </a>
         <a class="btn btn-outline" href="#courses" aria-label="Explore courses">Explore Courses</a>
       </div>
-
       <div class="benefits" aria-hidden="true" style="margin-top:16px">
         <div class="benefit">Practical curriculum</div>
         <div class="benefit">Certificate on completion</div>
         <div class="benefit">Marketing for sellers</div>
       </div>
     </div>
-
     <div class="right" aria-hidden="true">
-      <!-- showcase image - replace with your own high quality hero image -->
       <img src="https://imgpx.com/en/Fct3rWcIe13s.png" alt="Sample creations" loading="lazy">
     </div>
   </header>
@@ -199,57 +167,50 @@
     <section id="courses" class="section" aria-labelledby="courses-title">
       <h2 id="courses-title" class="section-title">📚 Courses We Offer</h2>
       <div class="courses" role="list">
-        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('ටෙඩි බෙයා (Teddy / Soft toys)')">
+        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Teddy / Soft Toys')">
           <div class="tag">Beginner · 4 sessions</div>
-          <div class="title">ටෙඩි බෙයා</div>
+          <div class="title">Teddy / Soft Toys</div>
           <div class="desc">Learn sewing, stuffing, finishing and basic embroidery to create premium soft toys.</div>
         </article>
-
-        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('සෝෆ්ට් ටොයිස් නිර්මාණය')">
+        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Soft Toy Design')">
           <div class="tag">Design · Patterns</div>
-          <div class="title">සෝෆ්ට් ටොයිස් නිර්මාණය</div>
+          <div class="title">Soft Toy Design</div>
           <div class="desc">Design soft toy characters and learn safe materials + finishing techniques.</div>
         </article>
-
-        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('බැග් සැකසුම්')">
+        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Bag Making')">
           <div class="tag">Skill · Functional</div>
-          <div class="title">බැග් සැකසුම්</div>
+          <div class="title">Bag Making</div>
           <div class="desc">From casual totes to structured bags—learn cutting, lining and hardware installation.</div>
         </article>
-
-        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('පැරීස් / පාර්ස් නිර්මාණ')">
+        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Purse & Accessory Design')">
           <div class="tag">Creative · Accessories</div>
-          <div class="title">පැරීස් / පාර්ස් නිර්මාණ</div>
+          <div class="title">Purse & Accessory Design</div>
           <div class="desc">Purse and accessory design workshop — sewing and finishing for sale-ready pieces.</div>
         </article>
-
-        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('සෝකා (Sewing / Stitching)')">
+        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Sewing / Stitching')">
           <div class="tag">Core · Sewing</div>
-          <div class="title">සෝකා (Sewing / Stitching)</div>
+          <div class="title">Sewing / Stitching</div>
           <div class="desc">Fundamentals of stitching, machine operation, hemming and tailoring basics.</div>
         </article>
-
-        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Kids Costume course')">
+        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Kids Costumes')">
           <div class="tag">Fun · Creative</div>
           <div class="title">Kids Costumes</div>
           <div class="desc">Design and make themed costumes — perfect for seasonal sales and events.</div>
         </article>
-
-        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Baby Shoes course')">
+        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Baby Shoes')">
           <div class="tag">Tiny · Handmade</div>
-          <div class="title">බෙබි සපත්තු</div>
+          <div class="title">Baby Shoes</div>
           <div class="desc">Soft, safe and comfortable baby shoes — pattern making and finishing techniques.</div>
         </article>
-
-        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('බෙබි හොප්පි')">
+        <article class="card" role="listitem" tabindex="0" onclick="openWhatsApp('Baby Gifts')">
           <div class="tag">Cute · Gift</div>
-          <div class="title">බෙබි හොප්පි</div>
+          <div class="title">Baby Gifts</div>
           <div class="desc">Create popular baby gift items — small price, high demand.</div>
         </article>
       </div>
     </section>
 
-    <!-- Marketing Carousel -->
+    <!-- Carousel & testimonials same as before, just image alt text updated -->
     <section class="section" aria-labelledby="showcase-title">
       <h2 id="showcase-title" class="section-title">📸 Sample Creations & Success Stories</h2>
       <div class="carousel-wrap">
@@ -259,17 +220,14 @@
           <div class="slide"><img src="https://imgpx.com/en/8ruPmiB262eC.png" alt="Kids costume sample" loading="lazy"></div>
           <div class="slide"><img src="https://imgpx.com/en/IAZ3kHuPNJ7R.png" alt="Baby shoes sample" loading="lazy"></div>
           <div class="slide"><img src="https://imgpx.com/en/TYKeNS6oYN8e.png" alt="Market ready product" loading="lazy"></div>
-
           <div class="nav">
             <button id="prev" aria-label="Previous slide">‹</button>
             <button id="next" aria-label="Next slide">›</button>
           </div>
-
           <div class="dots" id="dots" role="tablist" aria-label="Carousel dots"></div>
         </div>
       </div>
 
-      <!-- testimonials -->
       <div class="section" style="margin-top:18px">
         <div class="section-title">❤️ What our students say</div>
         <div class="testimonials">
@@ -282,162 +240,33 @@
             <div class="who">— Sunil, Small business owner</div>
           </blockquote>
           <blockquote class="t-card">
-            <p>“Clear steps, good materials list and certificate helped me get customers.”</p>
-            <div class="who">— Priya, Freelancer</div>
+            <p>“Clear steps, good materials list and certificate helped me get customers quickly.”</p>
+            <div class="who">— Kavindi, Freelancer</div>
           </blockquote>
         </div>
       </div>
     </section>
-
-    <!-- Marketing footer note -->
-    <section class="section" aria-hidden="true" style="margin-top:6px">
-      <div style="max-width:var(--max);margin:0 auto;padding:10px 20px;background:linear-gradient(90deg,rgba(204,31,107,0.06),transparent);border-radius:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-        <div style="font-weight:700">Limited seats • Enroll today</div>
-        <div style="color:var(--muted)">Practical batches, evening & weekend classes, starter kit provided.</div>
-      </div>
-    </section>
   </main>
 
-  <!-- sticky contact (WhatsApp) -->
-  <a class="sticky" id="stickyContact" href="https://wa.me/94772900343?text=Hello%20STTS%20-%20I%20want%20to%20enroll" aria-label="Contact via WhatsApp">
-    Message • 077 290 0343
-  </a>
+  <a class="sticky" href="https://wa.me/94772900343?text=I'm%20interested%20in%20courses%20(STTS)" id="whatsappSticky" aria-label="Chat with us on WhatsApp">Chat on WhatsApp</a>
 
-  <footer style="margin-top:28px">
-    <div style="max-width:var(--max);margin:0 auto;padding:18px 20px;color:#cfcfcf;font-size:0.95rem;text-align:center">
-      © 2025 STTS Arts & Crafts Academy — Crafted with care. <br>
-      Follow us on <a href="#" style="color:var(--accent);text-decoration:none">Instagram</a> • <a href="#" style="color:var(--accent);text-decoration:none">Facebook</a>
-    </div>
-  </footer>
-
-  <!-- Structured Data (local business / course provider) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"EducationalOrganization",
-    "name":"STTS Arts & Crafts Academy",
-    "url":"https://yourusername.github.io/",
-    "logo":"https://imgpx.com/en/Fct3rWcIe13s.png",
-    "description":"Hands-on courses in soft toys, bag design, sewing and more. Enroll via WhatsApp.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+94772900343",
-      "contactType": "customer service",
-      "availableLanguage": ["Sinhala","English"]
-    },
-    "sameAs":[]
-  }
-  </script>
-
-  <!-- Lightweight scripts: carousel, particles, haptics -->
   <script>
-  /* ---------- tiny particles (light) ---------- */
-  (function(){
-    const canvas = document.getElementById('particles');
-    if(!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let w = canvas.width = innerWidth;
-    let h = canvas.height = innerHeight;
-    const n = Math.max(12, Math.floor((w*h)/90000)); // scale with screen
-    const parts = [];
-    function rand(min,max){return Math.random()*(max-min)+min}
-    for(let i=0;i<n;i++){
-      parts.push({x:rand(0,w),y:rand(0,h),r:rand(0.8,2.4),dx:rand(-0.3,0.3),dy:rand(-0.3,0.3),alpha:rand(0.1,0.5)});
+    // WhatsApp click
+    function openWhatsApp(course) {
+      let url = 'https://wa.me/94772900343?text=I\'m interested in ' + encodeURIComponent(course + ' course at STTS Arts & Crafts Academy');
+      window.open(url,'_blank');
     }
-    function draw(){
-      ctx.clearRect(0,0,w,h);
-      for(const p of parts){
-        p.x+=p.dx; p.y+=p.dy;
-        if(p.x<0) p.x=w; if(p.x>w) p.x=0;
-        if(p.y<0) p.y=h; if(p.y>h) p.y=0;
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(204,31,107,'+p.alpha+')';
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fill();
-      }
-      requestAnimationFrame(draw);
-    }
-    draw();
-    addEventListener('resize',()=>{w=canvas.width=innerWidth;h=canvas.height=innerHeight});
-  })();
 
-  /* ---------- Carousel with dots and haptics ---------- */
-  (function(){
-    const slides = document.querySelectorAll('.carousel .slide');
-    const next = document.getElementById('next');
-    const prev = document.getElementById('prev');
-    const dotsWrap = document.getElementById('dots');
-    let idx = 0;
-    let playing = true;
-    let timer;
-
-    // create dots
-    slides.forEach((s,i)=>{
-      const d = document.createElement('div'); d.className='dot'; d.dataset.i=i;
-      d.setAttribute('role','tab'); d.setAttribute('aria-label','Slide '+(i+1));
-      d.addEventListener('click',()=>goto(i));
-      dotsWrap.appendChild(d);
-    });
-    const dots = dotsWrap.querySelectorAll('.dot');
-
-    function update(){
-      slides.forEach((s,i)=>s.classList.toggle('active',i===idx));
-      dots.forEach((d,i)=>d.classList.toggle('active',i===idx));
-    }
-    function goto(i){
-      idx = (i+slides.length)%slides.length;
-      update();
-      vibrateShort();
-      resetTimer();
-    }
-    function nextSlide(){ goto(idx+1) }
-    function prevSlide(){ goto(idx-1) }
-    function resetTimer(){ if(timer) clearInterval(timer); timer = setInterval(nextSlide,3000) }
-    function vibrateShort(){ if(navigator.vibrate) navigator.vibrate([14]) }
-
-    next.addEventListener('click', ()=>{ nextSlide(); vibrateShort(); });
-    prev.addEventListener('click', ()=>{ prevSlide(); vibrateShort(); });
-
-    // keyboard nav
-    document.addEventListener('keydown', e=>{ if(e.key==='ArrowRight') nextSlide(); if(e.key==='ArrowLeft') prevSlide(); });
-
-    update(); resetTimer();
-    // pause on hover for accessibility
-    document.querySelector('.carousel').addEventListener('mouseenter', ()=>{ if(timer) clearInterval(timer) });
-    document.querySelector('.carousel').addEventListener('mouseleave', resetTimer);
-  })();
-
-  /* ---------- small tilt effect for cards (pointer move) ---------- */
-  (function(){
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card=>{
-      card.addEventListener('pointermove', e=>{
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const cx = rect.width/2, cy = rect.height/2;
-        const dx = (x - cx) / cx;
-        const dy = (y - cy) / cy;
-        const rx = dy * 4; const ry = dx * -6;
-        card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px)`;
-      });
-      card.addEventListener('pointerleave', ()=>{ card.style.transform = ''; });
-    });
-  })();
-
-  /* ---------- Enroll & card click handler with haptics (open whatsapp) ---------- */
-  function openWhatsApp(course){
-    const msg = encodeURIComponent(`Interested in course: ${course} — Please share details.`);
-    const url = `https://wa.me/94772900343?text=${msg}`;
-    // short haptic feedback
-    if(navigator.vibrate) navigator.vibrate([20,10,20]);
-    window.open(url,'_blank');
-  }
-
-  // quick micro-haptic on main Enroll button
-  document.getElementById('enrollBtn').addEventListener('click', ()=>{ if(navigator.vibrate) navigator.vibrate([30]) });
-
+    // Carousel
+    let slides=document.querySelectorAll('.slide'),dots=document.getElementById('dots'),current=0,interval;
+    slides.forEach((s,i)=>{let d=document.createElement('div');d.className='dot';if(i===0)d.classList.add('active');d.addEventListener('click',()=>goToSlide(i));dots.appendChild(d)});
+    function goToSlide(n){slides[current].classList.remove('active');dots.children[current].classList.remove('active');current=n;slides[current].classList.add('active');dots.children[current].classList.add('active');}
+    function nextSlide(){goToSlide((current+1)%slides.length)}
+    function prevSlide(){goToSlide((current-1+slides.length)%slides.length)}
+    document.getElementById('next').addEventListener('click',()=>{nextSlide();resetInterval()})
+    document.getElementById('prev').addEventListener('click',()=>{prevSlide();resetInterval()})
+    function resetInterval(){clearInterval(interval);interval=setInterval(nextSlide,4000)}
+    interval=setInterval(nextSlide,4000)
   </script>
-
 </body>
 </html>
