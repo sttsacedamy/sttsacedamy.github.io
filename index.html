@@ -4,20 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>STTS Arts & Crafts Academy</title>
-<link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* RESET & BODY */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    margin: 0;
-    background: #f8f8f8;
-    color: #111;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    color: #222;
 }
 
+/* HERO */
 .hero {
-    background: linear-gradient(135deg, #1c1c1c, #333);
-    padding: 80px 20px;
+    background: linear-gradient(135deg, #1c1c1c, #444);
+    color: #fff;
     text-align: center;
-    color: white;
+    padding: 70px 20px;
 }
 .hero h1 {
     font-size: 3rem;
@@ -25,68 +30,68 @@ body {
     margin-bottom: 15px;
 }
 .hero p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     opacity: 0.85;
 }
 .contact-btn {
     display: inline-block;
     margin-top: 25px;
-    background: white;
+    padding: 14px 30px;
+    background: #fff;
     color: #1c1c1c;
-    padding: 14px 32px;
-    border-radius: 35px;
+    border-radius: 30px;
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 .contact-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    background: #1c1c1c;
+    color: #fff;
 }
 
+/* SECTION TITLE */
 .section-title {
     text-align: center;
-    font-size: 2.2rem;
-    margin: 60px 0 30px;
-    font-weight: 700;
+    font-size: 2rem;
     color: #1c1c1c;
+    font-weight: 700;
+    margin: 50px 0 20px;
 }
 
+/* COURSES GRID */
 .courses {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
 }
-
 .course-box {
     background: #fff;
-    padding: 25px;
-    border-radius: 16px;
+    padding: 22px;
+    border-radius: 14px;
     text-align: center;
     font-weight: 600;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 .course-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 .course-box a {
     text-decoration: none;
     color: #1c1c1c;
 }
 
+/* CAROUSEL */
 .carousel-container {
-    max-width: 750px;
-    margin: 50px auto 70px;
+    max-width: 700px;
+    margin: 40px auto 70px;
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    border-radius: 16px;
 }
 .carousel-container img {
     width: 100%;
@@ -94,8 +99,7 @@ body {
     top: 0; left: 0;
     opacity: 0;
     transition: opacity 0.8s ease-in-out, transform 0.3s;
-    border-radius: 16px;
-    cursor: pointer;
+    border-radius: 14px;
 }
 .carousel-container img.active {
     opacity: 1;
@@ -103,9 +107,9 @@ body {
 }
 .carousel-container img.active:hover {
     transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
+/* NAVIGATION */
 .carousel-nav {
     position: absolute;
     top: 50%;
@@ -113,15 +117,15 @@ body {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    padding: 0 15px;
+    padding: 0 10px;
 }
 .carousel-nav button {
     background: rgba(255,255,255,0.8);
     border: none;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 1.6rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -130,24 +134,27 @@ body {
     transform: scale(1.1);
 }
 
+/* FOOTER */
 footer {
-    background: #111;
-    color: white;
+    background: #222;
+    color: #fff;
     text-align: center;
-    padding: 30px 0;
+    padding: 25px 0;
     margin-top: 40px;
-    font-weight: 500;
 }
 </style>
+
 </head>
 <body>
 
+<!-- HERO -->
 <div class="hero">
-<h1>STTS Arts & Crafts Academy</h1>
-<p>Soft Toys • Bags • Costume Designing • Sewing & More</p>
-<a class="contact-btn" href="https://wa.me/94772900343">WhatsApp: 077 290 0343</a>
+    <h1>STTS Arts & Crafts Academy</h1>
+    <p>Soft Toys • Bags • Costume Designing • Sewing & More</p>
+    <a class="contact-btn" href="https://wa.me/94772900343">WhatsApp: 077 290 0343</a>
 </div>
 
+<!-- COURSES -->
 <h2 class="section-title">📚 Courses We Offer</h2>
 <div class="courses">
 <div class="course-box"><a href="https://wa.me/94772900343?text=ටෙඩි%20බෙයා%20course">ටෙඩි බෙයා (Teddy / Soft toys)</a></div>
@@ -160,6 +167,7 @@ footer {
 <div class="course-box"><a href="https://wa.me/94772900343?text=බෙබි%20හොප්පි%20course">බෙබි හොප්පි</a></div>
 </div>
 
+<!-- CAROUSEL -->
 <h2 class="section-title">📸 Sample Creations</h2>
 <div class="carousel-container" id="carousel">
 <img src="https://imgpx.com/en/Fct3rWcIe13s.png" class="active" alt="Sample 1">
@@ -174,34 +182,37 @@ footer {
 </div>
 </div>
 
+<!-- FOOTER -->
 <footer>
 © 2025 STTS Arts & Crafts Academy — All Rights Reserved
 </footer>
 
 <script>
+// Carousel JS
 const carousel = document.getElementById('carousel');
 const slides = carousel.querySelectorAll('img');
 let currentIndex = 0;
 let interval;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+function showSlide(index){
+    slides.forEach((slide, i) => slide.classList.toggle('active', i===index));
 }
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
+function nextSlide(){
+    currentIndex = (currentIndex+1) % slides.length;
     showSlide(currentIndex);
 }
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+function prevSlide(){
+    currentIndex = (currentIndex-1+slides.length) % slides.length;
     showSlide(currentIndex);
 }
-function startSlideShow() {
-    interval = setInterval(nextSlide, 1800);
-}
-carousel.addEventListener('mouseenter', () => clearInterval(interval));
+function startSlideShow(){ interval = setInterval(nextSlide, 1800); }
+
+carousel.addEventListener('mouseenter', ()=>clearInterval(interval));
 carousel.addEventListener('mouseleave', startSlideShow);
+
 document.getElementById('next').addEventListener('click', nextSlide);
 document.getElementById('prev').addEventListener('click', prevSlide);
+
 startSlideShow();
 </script>
 
